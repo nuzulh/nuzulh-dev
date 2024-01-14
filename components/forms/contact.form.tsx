@@ -15,11 +15,11 @@ import SMTPTransport from "nodemailer/lib/smtp-transport";
 import { contactMe } from "@/lib/actions/contact-me";
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Nama tidak boleh kosong"),
-  email: z.string().email("Email tidak valid"),
+  name: z.string().min(1, "Please input your name"),
+  email: z.string().email("Email is invalid"),
   phone: z.string().optional(),
   subject: z.string().optional(),
-  message: z.string().min(1, "Pesan tidak boleh kosong"),
+  message: z.string().min(1, "Please input your message"),
 });
 
 export type ContactSchema = z.infer<typeof contactSchema>;
@@ -43,7 +43,7 @@ export function ContactForm() {
         const result = await contactMe(values) as ApiResponse<SMTPTransport.SentMessageInfo>;
 
         toast[result.error ? "error" : "success"](
-          result.error ? "Aksi gagal!" : "Aksi berhasil!",
+          result.error ? "Failed to sent!" : "Sent successfully!",
           { description: result.message },
         );
 
@@ -61,9 +61,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nama</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="Masukkan nama Anda" />
+                <Input {...field} placeholder="Input your name here" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -77,7 +77,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="Masukkan email Anda" />
+                <Input {...field} placeholder="Input your email here" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -89,9 +89,9 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>No. HP</FormLabel>
+              <FormLabel>Phone number</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="(opsional) Masukkan no. hp Anda" />
+                <Input {...field} placeholder="(optional) Input your phone number here" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,9 +103,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Judul</FormLabel>
+              <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="(opsional) Masukkan masukkan judul pesan" />
+                <Input {...field} placeholder="(opsional) Input your subject here" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -117,16 +117,16 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Pesan</FormLabel>
+              <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea {...field} placeholder="Tuliskan pesan Anda" />
+                <Textarea {...field} placeholder="Describe your message here" />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button disabled={isSubmitting} className="mt-4 flex gap-2 w-full">
-          <Send size={18} /> Kirim
+          <Send size={18} /> Send
         </Button>
       </form>
     </Form>

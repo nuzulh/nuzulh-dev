@@ -1,7 +1,7 @@
 import { PageContainer } from "@/components/container";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Code, Code2, Download, Github, Linkedin, Loader2 } from "lucide-react";
+import { Code, Code2, Download, FolderOpen, Github, Linkedin, Loader2 } from "lucide-react";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -29,9 +29,9 @@ export default function HomePage() {
           Strong problem-solving skills and a commitment to staying current with emerging trends in web
           development.
         </p>
-        <Link href={process.env.NEXT_PUBLIC_CV_URL!} target="_blank">
+        <Link href={process.env.NEXT_PUBLIC_FOLDER_URL!} target="_blank">
           <Button>
-            <Download size={18} className="mr-2" /> Download CV
+            <FolderOpen size={18} className="mr-2" /> My Documents
           </Button>
         </Link>
         <div className="flex gap-4 border-r border-l px-4 py-2 mt-4">

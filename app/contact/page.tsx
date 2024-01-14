@@ -8,9 +8,9 @@ export default function ContactPage() {
       <main className="grow p-4 w-full flex flex-col items-center justify-center gap-4">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Hubungi saya</CardTitle>
+            <CardTitle>Contact me</CardTitle>
             <CardDescription>
-              Mari mulai berdiskusi terkait hal apa saja melalui formulir di bawah ini.
+              Please do not hesitate to send me a message on any topic, I will respond as soon as possible.
             </CardDescription>
           </CardHeader>
           <CardContent>
