@@ -105,7 +105,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input {...field} placeholder="(opsional) Input your subject here" />
+                <Input {...field} placeholder="(optional) Input your subject here" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -125,7 +125,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button disabled={isSubmitting} className="mt-4 flex gap-2 w-full">
+        <Button disabled={isSubmitting} className="flex gap-2 w-full">
           <Send size={18} /> Send
         </Button>
       </form>

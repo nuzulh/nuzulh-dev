@@ -1,21 +1,33 @@
 import { PageContainer } from "@/components/container";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Code, Code2, Download, FolderOpen, Github, Linkedin, Loader2 } from "lucide-react";
+import { Code, Code2, FolderOpen, Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <PageContainer>
       <main className="grow p-4 flex flex-col items-center justify-center gap-4 lg:px-64">
-        <Avatar className="w-52 md:w-64 h-52 md:h-64">
-          <AvatarImage src={process.env.NEXT_PUBLIC_AVATAR_URL} alt="@nuzulh" />
-          <AvatarFallback>NH</AvatarFallback>
-        </Avatar>
-        <h1 className="text-3xl font-extrabold pt-4">
-          Nuzul H
-          <span className="text-4xl text-primary font-black">.</span>
-        </h1>
+        <Image
+          src="/images/coding.svg"
+          width={400}
+          height={400}
+          className="w-64 h-64 lg:w-96 lg:h-96 -my-16"
+          alt="coding"
+          priority
+        />
+        <div className="flex items-center gap-3 pt-4">
+          <Image
+            src="/logo.png"
+            width={48}
+            height={48}
+            alt="logo"
+          />
+          <h1 className="text-3xl font-extrabold ">
+            Nuzul H
+            <span className="text-4xl text-primary font-black">.</span>
+          </h1>
+        </div>
         <h2 className="text-lg font-semibold flex items-center gap-2 font-mono">
           <Code className="text-primary" />
           Frontend Developer
