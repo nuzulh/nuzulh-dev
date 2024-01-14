@@ -1,6 +1,11 @@
 import { PageContainer } from "@/components/container";
 import { ContactForm } from "@/components/forms/contact.form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | Nuzul H."
+};
 
 export default function ContactPage() {
   return (
