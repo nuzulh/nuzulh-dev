@@ -18,7 +18,7 @@ export default function HomePage() {
         />
         <div className="flex items-center gap-3 pt-4">
           <Image
-            src="/logo.png"
+            src="/icon.png"
             width={48}
             height={48}
             alt="logo"

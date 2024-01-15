@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Nuzul H.",
   description: "gabut",
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: { icon: "/icon.png", apple: "/apple-icon.png" },
 };
 
 export default function RootLayout({
