@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={jakarta.className}>
         <ThemeProvider attribute='class' defaultTheme='dark'>
           <NextTopLoader showSpinner={false} shadow={false} />
-          <div className='fixed inset-0 -z-10 bg-gradient-to-br from-blue-500/10 to-background to-35%' />
+          <div className='hidden dark:block fixed inset-0 -z-10 bg-gradient-to-br from-blue-500/10 to-background to-35%' />
           <Header />
           <Atoms.Container className='flex gap-10 lg:mt-6'>
             <Aside />
