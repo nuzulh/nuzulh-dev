@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/providers/theme';
-import './globals.css';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import { AOSProvider, ThemeProvider } from '@/providers';
 import { Aside, Header } from '@/components/organisms';
 import { Atoms } from '@/components/atoms';
+import NextTopLoader from 'nextjs-toploader';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+});
 
 export const metadata: Metadata = {
   title: 'Nuzul H. - Personal Website',
@@ -19,17 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={jakarta.className}>
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
         >
+          <NextTopLoader showSpinner={false} shadow={false} />
           <Header />
           <Atoms.Container className='flex gap-4 lg:mt-8'>
             <Aside />
-            {children}
+            <AOSProvider>{children}</AOSProvider>
           </Atoms.Container>
         </ThemeProvider>
       </body>

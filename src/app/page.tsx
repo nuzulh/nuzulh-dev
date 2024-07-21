@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <main>
+    <main data-aos='fade-up'>
       home
     </main>
   );
