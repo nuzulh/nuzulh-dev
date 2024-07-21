@@ -3,6 +3,7 @@ import * as Button from './Button';
 import * as Dot from './Dot';
 import * as Container from './Container';
 import * as Separator from './Separator';
+import * as Verified from './Verified';
 
 export const Atoms = {
   ...Avatar,
@@ -10,4 +11,5 @@ export const Atoms = {
   ...Dot,
   ...Container,
   ...Separator,
+  ...Verified,
 };
