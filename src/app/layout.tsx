@@ -24,12 +24,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={jakarta.className}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute='class' defaultTheme='dark'>
           <NextTopLoader showSpinner={false} shadow={false} />
           <Header />
           <Atoms.Container className='flex gap-4 lg:mt-8'>

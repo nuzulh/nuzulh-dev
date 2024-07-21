@@ -14,11 +14,11 @@ export function Header() {
 
   return (
     <>
-      <header className='lg:hidden fixed top-0 h-16 w-full flex items-center justify-between gap-4 px-4 backdrop-blur border-b'>
+      <header className='z-40 lg:hidden fixed top-0 h-16 w-full flex items-center justify-between gap-4 px-4 backdrop-blur border-b'>
         <div className='flex items-center gap-2'>
           <Atoms.Avatar src='https://github.com/nuzulh.png' className='size-8 mr-2' />
           <span className='font-medium'>{MY_PROFILE.name}</span>
-          <BadgeCheck className='size-5 fill-green-500 stroke-background' />
+          <BadgeCheck className='size-5 fill-blue-500 stroke-background' />
         </div>
         <div className='flex items-center gap-2'>
           <ToggleTheme />
@@ -39,10 +39,10 @@ export function Header() {
             <Atoms.Avatar src='https://github.com/nuzulh.png' className='size-16' />
             <div className='flex items-center gap-2'>
               <span className='font-semibold'>{MY_PROFILE.name}</span>
-              <BadgeCheck className='size-5 fill-green-500 stroke-background' />
+              <BadgeCheck className='size-5 fill-blue-500 stroke-background' />
             </div>
             <div className='flex items-center gap-2'>
-              <div className='size-2 rounded-full bg-muted-foreground' />
+              <Atoms.Dot variant='muted' />
               <span className='text-xs text-muted-foreground'>{MY_PROFILE.status1}</span>
             </div>
           </SheetHeader>

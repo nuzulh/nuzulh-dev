@@ -2,11 +2,9 @@ import { PropsWithCn } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { PropsWithChildren } from 'react';
 
-type Props = PropsWithChildren & PropsWithCn;
-
-export function Container({ children, className }: Props) {
+export function Container({ children, className }: PropsWithChildren<PropsWithCn>) {
   return (
-    <div className={cn('container p-4 pt-20 lg:pt-4', className)}>
+    <div className={cn('w-full max-w-6xl mx-auto p-6 pt-20 lg:pt-6', className)}>
       {children}
     </div>
   );

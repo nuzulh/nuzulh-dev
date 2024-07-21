@@ -40,5 +40,5 @@ export const MY_PROFILE = {
   address: 'Banda Aceh, Indonesia 🇮🇩',
   status1: 'Working remotely',
   status2: 'Available for freelance project',
-  description: 'Experienced Frontend Developer with over 3 years of hands-on expertise designing and implementing innovative web applications. Proficient in front-end technologies, including HTML, CSS, JavaScript, TypeScript, and various modern frameworks. Adept at collaborating with cross-functional teams to drive project success and deliver exceptional user experiences. Strong problem-solving skills and a commitment to staying current with emerging trends in web development.',
+  description: 'Experienced Software Engineer with over 3 years of hands-on expertise designing and implementing innovative web & mobile applications especially in frontend side. Strong problem-solving skills and a commitment to staying current with emerging trends in web & mobile development.',
 };

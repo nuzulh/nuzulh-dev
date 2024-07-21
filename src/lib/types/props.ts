@@ -1,3 +1,1 @@
-export type PropsWithCn = {
-  className?: string;
-};
+export type PropsWithCn<P = unknown> = P & { className?: string; };
