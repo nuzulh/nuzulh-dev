@@ -25,14 +25,6 @@ export default function HomePage() {
         {MY_PROFILE.description}
       </p>
 
-      <p className='leading-6 opacity-90'>
-        {MY_PROFILE.description}
-      </p>
-
-      <p className='leading-6 opacity-90'>
-        {MY_PROFILE.description}
-      </p>
-
       <Atoms.Separator />
     </main>
   );
