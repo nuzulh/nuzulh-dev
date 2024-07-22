@@ -3,6 +3,7 @@
 import { Atoms } from '@/components/atoms';
 import { Sheet, SheetContent, SheetHeader, ToggleTheme } from '@/components/molecules';
 import { MY_PROFILE, NAV_MENUS } from '@/lib/consts';
+import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -56,8 +57,10 @@ export function Header({ showGradient = false }: Props) {
               <span className='text-xs text-muted-foreground'>{MY_PROFILE.status1}</span>
             </div>
           </SheetHeader>
+
           <Atoms.Separator className='my-4' />
-          <nav className='flex flex-col gap-2'>
+
+          <nav className='flex flex-col gap-1'>
             {NAV_MENUS
               .sort((a, b) => a.sort - b.sort)
               .map(item => (
@@ -65,7 +68,10 @@ export function Header({ showGradient = false }: Props) {
                   id={item.label}
                   key={item.label}
                   variant={pathname === item.href ? 'secondary' : 'ghost'}
-                  className='justify-start font-normal'
+                  className={cn(
+                    'justify-start font-normal text-muted-foreground',
+                    pathname === item.href && 'text-foreground'
+                  )}
                   asChild
                 >
                   <Link href={item.href} onClick={() => setSheetOpen(false)}>
@@ -74,6 +80,26 @@ export function Header({ showGradient = false }: Props) {
                 </Atoms.Button>
               ))}
           </nav>
+
+          <Atoms.Separator className='my-4' />
+
+          <div className='flex flex-col gap-2'>
+            <p className='text-muted-foreground opacity-50 text-sm'>Find Me</p>
+            {MY_PROFILE.socials.map(item => (
+              <Atoms.Button
+                id={item.label}
+                key={item.label}
+                variant='outline'
+                className='justify-start font-normal text-muted-foreground'
+                asChild
+              >
+                <Link href={item.href} target='_blank' onClick={() => setSheetOpen(false)}>
+                  <item.icon className='size-4 mr-2' /> {item.label}
+                </Link>
+              </Atoms.Button>
+            ))}
+          </div>
+
           <div className='absolute bottom-6 right-6'>
             <ToggleTheme />
           </div>

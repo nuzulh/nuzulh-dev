@@ -1,5 +1,14 @@
-import { BookOpenText, Coffee, Contact, Home, User } from 'lucide-react';
-import { NavMenu } from './types';
+import {
+  BookOpenText,
+  Coffee,
+  Contact,
+  Github,
+  Home,
+  Instagram,
+  Linkedin,
+  User,
+} from 'lucide-react';
+import { NavMenu, Profile } from './types';
 
 export const NAV_MENUS: NavMenu[] = [
   {
@@ -34,7 +43,7 @@ export const NAV_MENUS: NavMenu[] = [
   },
 ];
 
-export const MY_PROFILE = {
+export const MY_PROFILE: Profile = {
   name: 'Nuzul H.',
   nickName: 'Nuzul',
   avatar: 'https://github.com/nuzulh.png',
@@ -42,6 +51,11 @@ export const MY_PROFILE = {
   status1: 'Working remotely',
   status2: 'Open for freelance project',
   description: 'Experienced Software Engineer with over 3 years of hands-on expertise designing and implementing innovative web & mobile applications especially in frontend side. Strong problem-solving skills and a commitment to staying current with emerging trends in web & mobile development.',
+  socials: [
+    { label: 'Linkedin', href: 'https://linkedin.com/in/nuzulh', icon: Linkedin },
+    { label: 'GitHub', href: 'https://github.com/nuzulh', icon: Github },
+    { label: 'Instagram', href: 'https://instagram.com/nuzulhikam', icon: Instagram },
+  ],
   skills: [
     { label: 'Node.js', imageUrl: '/svgs/nodejs.svg' },
     { label: 'React.js', imageUrl: '/svgs/reactjs.svg' },

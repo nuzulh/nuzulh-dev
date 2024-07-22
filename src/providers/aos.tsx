@@ -2,6 +2,7 @@
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import { PropsWithChildren, useEffect } from 'react';
 
 export function AOSProvider({ children }: PropsWithChildren) {

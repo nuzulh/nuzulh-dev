@@ -50,6 +50,29 @@ export function Aside() {
           ))}
       </nav>
 
+      <Atoms.Separator />
+
+      <div className='flex flex-col gap-2'>
+        <p className='text-muted-foreground opacity-50 text-sm mb-2'>Find Me</p>
+        {MY_PROFILE.socials.map(item => (
+          <Atoms.Button
+            id={item.label}
+            key={item.label}
+            variant='outline'
+            className={cn(
+              'justify-start group px-4 text-muted-foreground transition-all duration-300',
+              pathname === item.href && 'text-foreground'
+            )}
+            asChild
+          >
+            <Link href={item.href} target='_blank'>
+              <item.icon className='size-4 mr-2 group-hover:-rotate-12 transition-all duration-300' />
+              {item.label}
+            </Link>
+          </Atoms.Button>
+        ))}
+      </div>
+
       <div className='grow flex flex-col justify-end'>
         <ToggleTheme />
       </div>
