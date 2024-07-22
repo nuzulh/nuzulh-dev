@@ -8,12 +8,22 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-export function Header() {
+type Props = {
+  showGradient?: boolean;
+};
+
+export function Header({ showGradient = false }: Props) {
   const pathname = usePathname();
   const [sheetOpen, setSheetOpen] = useState(false);
 
   return (
     <>
+      {showGradient && (
+        <div
+          className='hidden dark:block fixed inset-0 bg-gradient-to-br from-purple-500/10 to-background to-35% -z-10'
+        />
+      )}
+
       <header className='z-40 lg:hidden fixed top-0 h-16 w-full flex items-center justify-between gap-4 px-4 backdrop-blur border-b'>
         <div className='flex items-center gap-2'>
           <Atoms.Avatar src={MY_PROFILE.avatar} className='size-8 mr-2' />
