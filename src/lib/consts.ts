@@ -90,3 +90,8 @@ export const MY_PROFILE: Profile = {
     { label: 'Postman', imageUrl: '/svgs/postman.svg' },
   ],
 };
+
+export const COMMON_MESSAGE = {
+  error: 'Oops, sorry! Something error occurred 🧐',
+  errorService: 'I think some of our services have trouble 😔. Please try again later.',
+};

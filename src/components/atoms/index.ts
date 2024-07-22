@@ -4,6 +4,9 @@ import * as Dot from './Dot';
 import * as Container from './Container';
 import * as Separator from './Separator';
 import * as Verified from './Verified';
+import * as Label from './Label';
+import * as Input from './Input';
+import * as TextArea from './TextArea';
 
 export const Atoms = {
   ...Avatar,
@@ -12,4 +15,7 @@ export const Atoms = {
   ...Container,
   ...Separator,
   ...Verified,
+  ...Label,
+  ...Input,
+  ...TextArea,
 };

@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import { AOSProvider, ThemeProvider } from '@/providers';
 import { Aside, Header } from '@/components/organisms';
 import { Atoms } from '@/components/atoms';
+import { Toaster } from '@/components/molecules';
 import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Aside />
             <AOSProvider>{children}</AOSProvider>
           </Atoms.Container>
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>
