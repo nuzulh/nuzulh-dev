@@ -10,15 +10,15 @@ export default function HomePage() {
       <div className='flex flex-col lg:flex-row gap-2 lg:gap-6'>
         <div className='flex items-center gap-2'>
           <Atoms.Dot variant='muted' />
-          <h3 className='text-muted-foreground text-sm'>
+          <span className='text-muted-foreground text-sm'>
             Based in {MY_PROFILE.address}
-          </h3>
+          </span>
         </div>
         <div className='flex items-center gap-2'>
           <Atoms.Dot variant='muted' />
-          <h3 className='text-muted-foreground text-sm'>
+          <span className='text-muted-foreground text-sm'>
             {MY_PROFILE.status2}
-          </h3>
+          </span>
         </div>
       </div>
 
