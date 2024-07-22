@@ -1,11 +1,15 @@
 import { Atoms } from '@/components/atoms';
-import { CarouselSkills } from '@/components/organisms';
+import { CarouselSkills, FeaturedProjects } from '@/components/organisms';
 import { MY_PROFILE } from '@/lib/consts';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
     <main data-aos='fade-up' className='space-y-6 w-full overflow-auto'>
-      <h1 className='text-xl lg:text-3xl font-semibold'>Hi, I&apos;m Nuzul 👋</h1>
+      <h1 className='text-2xl lg:text-3xl font-semibold'>
+        Hi, I&apos;m {MY_PROFILE.nickName} 👋
+      </h1>
 
       <div className='flex flex-col lg:flex-row gap-2 lg:gap-6'>
         <div className='flex items-center gap-2'>
@@ -27,8 +31,18 @@ export default function HomePage() {
       </p>
 
       <Atoms.Separator />
+      <div className='flex items-center gap-4 justify-between'>
+        <h2 className='font-semibold text-lg opacity-85'>My Featured Projects</h2>
+        <Atoms.Button variant='ghost' className='opacity-85' asChild>
+          <Link href='/projects'>
+            View All <ArrowRight className='size-4 ml-2' />
+          </Link>
+        </Atoms.Button>
+      </div>
+      <FeaturedProjects />
 
-      <h2 className='text-lg font-semibold'>Tools I Have Used</h2>
+      <Atoms.Separator />
+      <h2 className='font-semibold text-lg opacity-85'>Tools I Have Used</h2>
       <CarouselSkills />
     </main>
   );

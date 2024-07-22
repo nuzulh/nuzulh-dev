@@ -18,7 +18,7 @@ export function Aside() {
 
       if (scrollY > 60) return setHideAvatar(true);
       return setHideAvatar(false);
-    }, 250),
+    }, 150),
     []
   );
 
@@ -32,15 +32,15 @@ export function Aside() {
     <aside
       className={cn(
         'hidden h-[85vh] sticky top-14 lg:flex flex-col gap-4 w-full max-w-60',
-        'transition-all duration-300',
+        'transition-all duration-700',
         hideAvatar && '-top-14'
       )}
     >
       <Atoms.Avatar
         src={MY_PROFILE.avatar}
         className={cn(
-          'size-20 transition-all duration-300',
-          hideAvatar && 'scale-0'
+          'size-20 transition-all duration-700',
+          hideAvatar && 'scale-0 opacity-0'
         )}
       />
 
