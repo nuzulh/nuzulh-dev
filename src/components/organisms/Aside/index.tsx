@@ -6,13 +6,43 @@ import { MY_PROFILE, NAV_MENUS } from '@/lib/consts';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
 
 export function Aside() {
   const pathname = usePathname();
+  const [hideAvatar, setHideAvatar] = useState(false);
+
+  const handleScroll = useCallback(
+    () => setTimeout(() => {
+      const { scrollY } = window;
+
+      if (scrollY > 60) return setHideAvatar(true);
+      return setHideAvatar(false);
+    }, 250),
+    []
+  );
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
-    <aside className='hidden min-h-[85vh] sticky top-14 lg:flex flex-col gap-4 w-full max-w-60'>
-      <Atoms.Avatar src={MY_PROFILE.avatar} className='size-20' />
+    <aside
+      className={cn(
+        'hidden h-[85vh] sticky top-14 lg:flex flex-col gap-4 w-full max-w-60',
+        'transition-all duration-300',
+        hideAvatar && '-top-14'
+      )}
+    >
+      <Atoms.Avatar
+        src={MY_PROFILE.avatar}
+        className={cn(
+          'size-20 transition-all duration-300',
+          hideAvatar && 'scale-0'
+        )}
+      />
 
       <div className='space-y-1'>
         <div className='flex items-center gap-2'>

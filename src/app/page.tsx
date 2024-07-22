@@ -4,7 +4,7 @@ import { MY_PROFILE } from '@/lib/consts';
 
 export default function HomePage() {
   return (
-    <main data-aos='fade-up' className='space-y-6 overflow-auto'>
+    <main data-aos='fade-up' className='space-y-6 w-full overflow-auto'>
       <h1 className='text-xl lg:text-3xl font-semibold'>Hi, I&apos;m Nuzul 👋</h1>
 
       <div className='flex flex-col lg:flex-row gap-2 lg:gap-6'>
