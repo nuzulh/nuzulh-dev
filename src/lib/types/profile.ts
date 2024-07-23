@@ -1,5 +1,43 @@
 import { LucideIcon } from 'lucide-react';
 
+export type AvailableStack =
+  | 'Node.js'
+  | 'React.js'
+  | 'Next.js'
+  | 'HTML5'
+  | 'CSS3'
+  | 'Bootstrap'
+  | 'TailwindCSS'
+  | 'React Native'
+  | 'Vite'
+  | 'Redux'
+  | 'Zustand'
+  | 'Axios'
+  | 'React Hook Form'
+  | 'Zod'
+  | 'Chakra UI'
+  | 'Daisy UI'
+  | 'Material UI'
+  | 'Shadcn UI'
+  | 'JavaScript'
+  | 'TypeScript'
+  | 'Express.js'
+  | 'Prisma'
+  | 'MySQL'
+  | 'PostgreSQL'
+  | 'Firebase'
+  | 'MQTT'
+  | 'Dart'
+  | 'Flutter'
+  | 'Python'
+  | 'Raspberry Pi'
+  | 'Postman';
+
+export type Stack = {
+  label: AvailableStack;
+  imageUrl: string;
+};
+
 export type Profile = {
   name: string;
   nickName: string;
@@ -13,8 +51,17 @@ export type Profile = {
     href: string;
     icon: LucideIcon;
   }[];
-  skills: {
-    label: string;
-    imageUrl: string;
-  }[];
+  skills: Stack[];
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  thumbnailUrl: string;
+  imageUrls: string[];
+  stacks: Stack[];
+  isFeatured: boolean;
+  sourceCodeUrl?: string;
+  demoUrl?: string;
+  content?: string;
 };

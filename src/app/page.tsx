@@ -1,5 +1,5 @@
 import { Atoms } from '@/components/atoms';
-import { CarouselSkills, FeaturedProjects } from '@/components/organisms';
+import { CarouselSkills, CarouselProjects } from '@/components/organisms';
 import { MY_PROFILE } from '@/lib/consts';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -39,7 +39,7 @@ export default function HomePage() {
           </Link>
         </Atoms.Button>
       </div>
-      <FeaturedProjects />
+      <CarouselProjects />
 
       <Atoms.Separator />
       <h2 className='font-semibold text-lg opacity-85'>Tools I Have Used</h2>
