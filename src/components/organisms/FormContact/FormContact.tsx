@@ -8,7 +8,6 @@ import { schemaContact, SchemaContact } from './schema';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -87,10 +86,6 @@ export function FormContact() {
             )}
           />
         </div>
-
-        <FormDescription>
-          Message me anything. Don&apos;t worry, I&apos;ll keep it private and send you message back through email ASAP.
-        </FormDescription>
 
         <Atoms.Button
           type='submit'
