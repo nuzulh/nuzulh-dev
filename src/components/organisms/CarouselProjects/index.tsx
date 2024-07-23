@@ -1,5 +1,6 @@
 'use client';
 
+import { Atoms } from '@/components/atoms';
 import {
   Card,
   CardContent,
@@ -44,13 +45,25 @@ export function CarouselProjects() {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className='pt-5 space-y-2'>
+                  <CardContent className='pt-5 grid gap-1'>
                     <p className='font-semibold line-clamp-1 opacity-85'>
                       {item.title}
                     </p>
                     <p className='text-sm font-normal line-clamp-2 text-muted-foreground'>
                       {item.description}
                     </p>
+                    <Atoms.Separator className='my-2' />
+                    <div className='flex items-center gap-2'>
+                      {item.stacks.map(stack => (
+                        <Image
+                          key={stack.label}
+                          src={stack.imageUrl}
+                          alt={stack.label}
+                          height={24}
+                          width={24}
+                        />
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
