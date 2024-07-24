@@ -1,15 +1,14 @@
 import { Atoms } from '@/components/atoms';
+import { Heading } from '@/components/molecules';
 import { FormContact } from '@/components/organisms';
 
 export default function ContactPage() {
   return (
     <main data-aos='fade-up' className='space-y-6 w-full'>
-      <div className='space-y-2'>
-        <h1 className='text-2xl font-semibold'>Contact</h1>
-        <h2 className='text-sm lg:text-base text-muted-foreground'>
-          Feel free to get in touch and let&apos;s have a discussion about how we can work together.
-        </h2>
-      </div>
+      <Heading
+        title='Contact'
+        description="Feel free to get in touch and let's have a discussion about how we can work together."
+      />
 
       <Atoms.Separator />
 

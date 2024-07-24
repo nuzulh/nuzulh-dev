@@ -29,7 +29,7 @@ export function CarouselProjects() {
               data-aos='fade-left'
               data-aos-delay={index * 100}
             >
-              <Link href={`/projects/${item.slug}`}>
+              <Link href={`/projects/${item.cname}`}>
                 <Card className='w-full max-w-64 grid bg-secondary/35 group'>
                   <CardHeader className='p-0 aspect-square relative overflow-hidden'>
                     <Image
@@ -73,8 +73,8 @@ export function CarouselProjects() {
           ))}
       </CarouselContent>
       <div className='hidden lg:flex'>
-        <CarouselPrevious variant='default' className='disabled:hidden left-0' />
-        <CarouselNext variant='default' className='disabled:hidden right-0' />
+        <CarouselPrevious className='disabled:hidden left-1' />
+        <CarouselNext className='disabled:hidden right-1' />
       </div>
     </Carousel>
   );

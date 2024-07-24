@@ -1,10 +1,9 @@
 'use client';
 
-import { Carousel, CarouselContent, CarouselItem } from '@/components/molecules';
+import { Carousel, CarouselContent, CarouselItem, ChipStack } from '@/components/molecules';
 import { MY_PROFILE } from '@/lib/consts';
 import { sliceToThreeArrays } from '@/lib/utils';
 import Autoscroll from 'embla-carousel-auto-scroll';
-import Image from 'next/image';
 
 const slicedSkills = sliceToThreeArrays(MY_PROFILE.skills);
 
@@ -28,16 +27,7 @@ export function CarouselSkills() {
           <CarouselContent>
             {skills.map(item => (
               <CarouselItem key={item.label} className='basis-auto'>
-                <div className='px-4 py-2 text-sm font-medium flex items-center gap-2 rounded-full border bg-secondary/50 w-fit'>
-                  <Image
-                    src={item.imageUrl}
-                    height={18}
-                    width={18}
-                    alt={item.label}
-                    loading='lazy'
-                  />
-                  {item.label}
-                </div>
+                <ChipStack data={item} />
               </CarouselItem>
             ))}
           </CarouselContent>

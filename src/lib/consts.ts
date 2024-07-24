@@ -95,15 +95,22 @@ export const MY_PROFILE: Profile = {
   skills: STACKS,
 };
 
-// TODO: backend integration using prisma & server action
+// TODO: backend integration using prisma & postgresql
 export const MY_PROJECTS: Project[] = [
   {
-    slug: 'nuzulh-dev',
+    cname: 'nuzulh-dev',
     title: 'nuzulh.dev',
     description: 'My personal website. Currently, I\'m still developing some cool features and will be launched soon. ☕️',
     isFeatured: true,
+    // sourceCodeUrl: 'https://github.com/nuzulh/nuzulh-dev',
+    demoUrl: 'https://nuzulh-dev.vercel.app/',
     thumbnailUrl: '/images/nuzulh-dev.webp',
-    imageUrls: [],
+    imageUrls: [
+      '/images/nuzulh-dev.webp',
+      '/images/skpi.webp',
+      '/images/rumah-bahasa.webp',
+      '/images/listkol.webp',
+    ],
     stacks: [
       getStack('Next.js'),
       getStack('TypeScript'),
@@ -112,12 +119,12 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'skpi-ft-usk',
+    cname: 'skpi-ft-usk',
     title: 'SKPI-FT-USK',
     description: 'An internal web application for managing student activities and approving certificates as requirements for college graduation. It has two roles; student and administrator. Student role is submitting activities and requesting certificates approval to administrator. Administrator role is approving student\'s requests. Additionally, students able to message administrator in realtime for supports. Furthermore, the app consists with "export to PDF" feature that summarize student activities.',
     isFeatured: true,
     thumbnailUrl: '/images/skpi.webp',
-    imageUrls: [],
+    imageUrls: ['/images/skpi.webp'],
     stacks: [
       getStack('React.js'),
       getStack('TypeScript'),
@@ -127,13 +134,13 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'rumah-bahasa',
+    cname: 'rumah-bahasa',
     title: 'Rumah Bahasa',
     description: 'An online language learning platform. Has a dashboard for admin/teacher roles to manage class participants, as well as learning lessons in the form of videos equipped with discussion features so that there is interaction between students and teachers on each subject.',
     isFeatured: true,
-    thumbnailUrl: '/images/rumah-bahasa.webp',
-    imageUrls: [],
     demoUrl: 'https://rumahbahasa.vercel.app',
+    thumbnailUrl: '/images/rumah-bahasa.webp',
+    imageUrls: ['/images/rumah-bahasa.webp'],
     stacks: [
       getStack('Next.js'),
       getStack('TypeScript'),
@@ -144,13 +151,14 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'listkol',
+    cname: 'listkol',
     title: 'ListKOL - Landing Page',
     description: 'A starter responsive landing page built with React (Typescript) and Tailwind CSS.',
     isFeatured: true,
-    thumbnailUrl: '/images/listkol.webp',
-    imageUrls: [],
+    sourceCodeUrl: 'https://github.com/nuzulh/fe-listkol',
     demoUrl: 'https://listkol.vercel.app',
+    thumbnailUrl: '/images/listkol.webp',
+    imageUrls: ['/images/listkol.webp'],
     stacks: [
       getStack('React.js'),
       getStack('TypeScript'),
@@ -160,12 +168,13 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'campus-life',
+    cname: 'campus-life',
     title: 'CampusLife',
     description: 'Basically this is a todo application for mobile platform with expanded features, especially for college students which has complex tasks assigned by their lecturer. Specifically, this app have integrated with a university data center which make their students easier to manage tasks based on subjects & schedules connected with the university data center. Students will get notification in their smartphone for reminder of a task.',
     isFeatured: true,
+    sourceCodeUrl: 'https://github.com/nuzulh/campus-life',
     thumbnailUrl: '/images/campus-life.webp',
-    imageUrls: [],
+    imageUrls: ['/images/campus-life.webp'],
     stacks: [
       getStack('Dart'),
       getStack('Flutter'),
@@ -173,12 +182,13 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'no-trash',
+    cname: 'no-trash',
     title: 'NoTrash',
     description: 'A mobile application built with Flutter and Firebase. The main feature of this app is reporting a piled up rubbish around user, the report consists description, location address & map coordinate, and a picture of the rubbish. Each submitted report will notify users with "Officer" role. The report will be reviewed and confirmed by officer, then follow the maps submitted by reporter and handle the piled up rubbish in that location. After a report confirmed and handled, the officer will get some points linked to his account that will make him get benefits from his superiors.',
     isFeatured: false,
+    sourceCodeUrl: 'https://github.com/nuzulh/NoTrashApp',
     thumbnailUrl: '/images/no-trash.webp',
-    imageUrls: [],
+    imageUrls: ['/images/no-trash.webp'],
     stacks: [
       getStack('Dart'),
       getStack('Flutter'),
