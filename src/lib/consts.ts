@@ -98,8 +98,23 @@ export const MY_PROFILE: Profile = {
 // TODO: backend integration using prisma & server action
 export const MY_PROJECTS: Project[] = [
   {
+    slug: 'nuzulh-dev',
+    title: 'nuzulh.dev',
+    description: 'My personal website. Currently, I\'m still developing some cool features and will be launched soon. ☕️',
+    isFeatured: true,
+    thumbnailUrl: '/images/nuzulh-dev.webp',
+    imageUrls: [],
+    stacks: [
+      getStack('Next.js'),
+      getStack('TypeScript'),
+      getStack('Shadcn UI'),
+      getStack('TailwindCSS'),
+    ],
+  },
+  {
+    slug: 'skpi-ft-usk',
     title: 'SKPI-FT-USK',
-    description: 'This is a web application for managing student activities and approving certificates as requirements for college graduation. It has two roles; student and administrator. Student role is submitting activities and requesting certificates approval to administrator. Administrator role is approving student\'s requests. Additionally, students able to message administrator in realtime for supports. Furthermore, the app consists with "export to PDF" feature that summarize student activities.',
+    description: 'An internal web application for managing student activities and approving certificates as requirements for college graduation. It has two roles; student and administrator. Student role is submitting activities and requesting certificates approval to administrator. Administrator role is approving student\'s requests. Additionally, students able to message administrator in realtime for supports. Furthermore, the app consists with "export to PDF" feature that summarize student activities.',
     isFeatured: true,
     thumbnailUrl: '/images/skpi.webp',
     imageUrls: [],
@@ -112,6 +127,40 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
+    slug: 'rumah-bahasa',
+    title: 'Rumah Bahasa',
+    description: 'An online language learning platform. Has a dashboard for admin/teacher roles to manage class participants, as well as learning lessons in the form of videos equipped with discussion features so that there is interaction between students and teachers on each subject.',
+    isFeatured: true,
+    thumbnailUrl: '/images/rumah-bahasa.webp',
+    imageUrls: [],
+    demoUrl: 'https://rumahbahasa.vercel.app',
+    stacks: [
+      getStack('Next.js'),
+      getStack('TypeScript'),
+      getStack('Shadcn UI'),
+      getStack('TailwindCSS'),
+      getStack('Prisma'),
+      getStack('PostgreSQL'),
+    ],
+  },
+  {
+    slug: 'listkol',
+    title: 'ListKOL - Landing Page',
+    description: 'A starter responsive landing page built with React (Typescript) and Tailwind CSS.',
+    isFeatured: true,
+    thumbnailUrl: '/images/listkol.webp',
+    imageUrls: [],
+    demoUrl: 'https://listkol.vercel.app',
+    stacks: [
+      getStack('React.js'),
+      getStack('TypeScript'),
+      getStack('Shadcn UI'),
+      getStack('TailwindCSS'),
+      getStack('Vite'),
+    ],
+  },
+  {
+    slug: 'campus-life',
     title: 'CampusLife',
     description: 'Basically this is a todo application for mobile platform with expanded features, especially for college students which has complex tasks assigned by their lecturer. Specifically, this app have integrated with a university data center which make their students easier to manage tasks based on subjects & schedules connected with the university data center. Students will get notification in their smartphone for reminder of a task.',
     isFeatured: true,
@@ -124,9 +173,10 @@ export const MY_PROJECTS: Project[] = [
     ],
   },
   {
+    slug: 'no-trash',
     title: 'NoTrash',
-    description: 'This is a mobile application built with Flutter and Firebase. The main feature of this app is reporting a piled up rubbish around user, the report consists description, location address & map coordinate, and a picture of the rubbish. Each submitted report will notify users with "Officer" role. The report will be reviewed and confirmed by officer, then follow the maps submitted by reporter and handle the piled up rubbish in that location. After a report confirmed and handled, the officer will get some points linked to his account that will make him get benefits from his superiors.',
-    isFeatured: true,
+    description: 'A mobile application built with Flutter and Firebase. The main feature of this app is reporting a piled up rubbish around user, the report consists description, location address & map coordinate, and a picture of the rubbish. Each submitted report will notify users with "Officer" role. The report will be reviewed and confirmed by officer, then follow the maps submitted by reporter and handle the piled up rubbish in that location. After a report confirmed and handled, the officer will get some points linked to his account that will make him get benefits from his superiors.',
+    isFeatured: false,
     thumbnailUrl: '/images/no-trash.webp',
     imageUrls: [],
     stacks: [

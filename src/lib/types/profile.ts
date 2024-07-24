@@ -55,6 +55,7 @@ export type Profile = {
 };
 
 export type Project = {
+  slug: string;
   title: string;
   description: string;
   thumbnailUrl: string;
