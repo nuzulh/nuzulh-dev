@@ -29,7 +29,7 @@ export function CarouselPortfolio({ data }: Props) {
               alt={`${data.title}-image-${index}`}
               height={600}
               width={600}
-              className='hover:scale-110 rounded-lg lg:rounded-xl transition-all duration-500'
+              className='lg:hover:scale-110 rounded-lg lg:rounded-xl transition-all duration-500'
             />
           </CarouselItem>
         ))}
