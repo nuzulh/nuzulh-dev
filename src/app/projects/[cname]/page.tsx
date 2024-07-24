@@ -38,10 +38,10 @@ export default function ProjectDetailPage({ params }: Props) {
 
       <Atoms.Separator />
 
-      <div className='flex flex-col lg:flex-row items-start gap-4'>
+      <div className='flex flex-col lg:flex-row items-start gap-4 w-full'>
         <CarouselPortfolio data={project} />
 
-        <div className='flex flex-col gap-4 items-center lg:items-start basis-2/5'>
+        <div className='flex flex-col gap-4 items-center lg:items-start w-full lg:w-2/5'>
           <div className='flex items-center gap-3'>
             <Atoms.Button variant='destructive' size='sm' asChild>
               <Link
