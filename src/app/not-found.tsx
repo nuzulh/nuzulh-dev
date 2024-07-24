@@ -7,8 +7,8 @@ export default function NotFound() {
     <div data-aos='zoom-in' className='w-full flex items-center justify-center flex-col gap-4'>
       <Image
         src='/svgs/404.svg'
-        height={400}
-        width={400}
+        height={280}
+        width={280}
         alt='404'
       />
       <Atoms.Button variant='secondary' asChild>
