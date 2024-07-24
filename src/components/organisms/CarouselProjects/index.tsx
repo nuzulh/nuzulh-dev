@@ -8,6 +8,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/molecules';
 import { MY_PROJECTS } from '@/lib/consts';
 import { ArrowRight } from 'lucide-react';
@@ -27,7 +29,7 @@ export function CarouselProjects() {
               data-aos='fade-left'
               data-aos-delay={index * 100}
             >
-              <Link href='#'>
+              <Link href={`/projects/${item.slug}`}>
                 <Card className='w-full max-w-64 grid bg-secondary/35 group'>
                   <CardHeader className='p-0 aspect-square relative overflow-hidden'>
                     <Image
@@ -59,8 +61,8 @@ export function CarouselProjects() {
                           key={stack.label}
                           src={stack.imageUrl}
                           alt={stack.label}
-                          height={24}
-                          width={24}
+                          height={22}
+                          width={22}
                         />
                       ))}
                     </div>
@@ -69,8 +71,11 @@ export function CarouselProjects() {
               </Link>
             </CarouselItem>
           ))}
-
       </CarouselContent>
+      <div className='hidden lg:flex'>
+        <CarouselPrevious variant='default' className='disabled:hidden left-0' />
+        <CarouselNext variant='default' className='disabled:hidden right-0' />
+      </div>
     </Carousel>
   );
 }
