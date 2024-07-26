@@ -5,6 +5,7 @@ import {
   Home,
   Instagram,
   Linkedin,
+  MessageCircle,
   User,
 } from 'lucide-react';
 import { AvailableStack, NavMenu, Profile, Project, Stack } from './types';
@@ -33,6 +34,12 @@ export const NAV_MENUS: NavMenu[] = [
     label: 'Contact',
     icon: Contact,
     href: '/contact',
+  },
+  {
+    sort: 5,
+    label: 'Guestroom',
+    icon: MessageCircle,
+    href: '/guestroom',
   },
 ];
 
