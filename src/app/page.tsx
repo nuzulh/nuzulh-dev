@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <main data-aos='fade-up' className='space-y-6 w-full overflow-auto'>
+    <main data-aos='fade-up' className='space-y-6 w-full overflow-hidden'>
       <h1 className='text-2xl lg:text-3xl font-semibold'>
         Hi, I&apos;m {MY_PROFILE.nickName} 👋
       </h1>
