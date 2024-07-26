@@ -73,7 +73,7 @@ export function Aside() {
               asChild
             >
               <Link href={item.href}>
-                <item.icon className='size-4 mr-2 group-hover:-rotate-12 transition-all duration-300' />
+                <item.icon className='size-5 mr-2 group-hover:-rotate-12 transition-all duration-300' />
                 {item.label}
               </Link>
             </Atoms.Button>
