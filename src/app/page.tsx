@@ -1,5 +1,5 @@
 import { Atoms } from '@/components/atoms';
-import { CarouselSkills, CarouselProjects } from '@/components/organisms';
+import { CarouselSkills, CarouselProjects, CardContact } from '@/components/organisms';
 import { MY_PROFILE } from '@/lib/consts';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -44,6 +44,15 @@ export default function HomePage() {
       <Atoms.Separator />
       <h2 className='font-semibold text-lg opacity-85'>Tools I Have Used</h2>
       <CarouselSkills />
+
+      <Atoms.Separator />
+      <div className='space-y-3'>
+        <h2 className='font-semibold text-lg opacity-85'>What I&apos;ve Been Working On</h2>
+        <p className='opacity-85'>
+          I assist brands, companies, institutions, and startups in creating exceptional digital experiences for their businesses through strategic development services.
+        </p>
+      </div>
+      <CardContact />
     </main>
   );
 }

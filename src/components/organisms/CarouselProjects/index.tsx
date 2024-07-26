@@ -30,7 +30,7 @@ export function CarouselProjects() {
               data-aos-delay={index * 100}
             >
               <Link href={`/projects/${item.cname}`}>
-                <Card className='w-full max-w-64 grid bg-secondary/35 group'>
+                <Card className='w-full max-w-64 grid group'>
                   <CardHeader className='p-0 aspect-square relative overflow-hidden'>
                     <Image
                       src={item.thumbnailUrl}

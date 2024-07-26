@@ -14,7 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: 'Nuzul H. - Personal Website',
-  description: 'Anything',
+  description: 'No description. Just my personal website.',
 };
 
 export default function RootLayout({
