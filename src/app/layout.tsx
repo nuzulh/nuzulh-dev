@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={jakarta.className}>
         <ThemeProvider attribute='class' defaultTheme='dark'>
-          <NextTopLoader showSpinner={false} shadow={false} />
+          <NextTopLoader showSpinner={false} />
           <Header showGradient />
           <Atoms.Container className='flex gap-10 lg:mt-6'>
             <Aside />
