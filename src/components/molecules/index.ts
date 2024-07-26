@@ -6,3 +6,5 @@ export * from './Form';
 export * from './Toaster';
 export * from './Heading';
 export * from './ChipStack';
+export * from './Accordion';
+export * from './Tabs';
