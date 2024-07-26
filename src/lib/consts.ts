@@ -1,5 +1,4 @@
 import {
-  BookOpenText,
   Coffee,
   Contact,
   Github,
@@ -31,12 +30,6 @@ export const NAV_MENUS: NavMenu[] = [
   },
   {
     sort: 4,
-    label: 'Blog',
-    icon: BookOpenText,
-    href: '/blog',
-  },
-  {
-    sort: 5,
     label: 'Contact',
     icon: Contact,
     href: '/contact',
