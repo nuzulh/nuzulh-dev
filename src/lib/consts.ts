@@ -8,7 +8,7 @@ import {
   MessageCircleMore,
   User,
 } from 'lucide-react';
-import { AvailableStack, Career, NavMenu, Profile, Project, Stack } from './types';
+import { AvailableStack, Career, Education, NavMenu, Profile, Project, Stack } from './types';
 
 export const NAV_MENUS: NavMenu[] = [
   {
@@ -300,6 +300,21 @@ export const MY_CAREERS: Career[] = [
       'Team working with agile development method.',
       'Problem solving and bug fixing.',
     ],
+  },
+];
+
+export const MY_EDUCATIONS: Education[] = [
+  {
+    logoUrl: '/svgs/usk.svg',
+    schoolLabel: 'USK',
+    schoolFullName: 'Universitas Syiah Kuala',
+    address: 'Banda Aceh, Indonesia 🇮🇩',
+    level: 'Bachelor\'s degree',
+    major: 'Computer Engineering, (S.T)',
+    fromYear: 2019,
+    endYear: 2023,
+    score: 3.51,
+    scoreMax: 4.00,
   },
 ];
 

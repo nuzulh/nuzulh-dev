@@ -79,3 +79,16 @@ export type Career = {
   workType: 'Remote' | 'Hybrid' | 'On-site';
   responsibilities: string[];
 };
+
+export type Education = {
+  logoUrl: string;
+  schoolLabel: string;
+  schoolFullName: string;
+  address: string;
+  level: string;
+  major: string;
+  fromYear: number;
+  endYear: number;
+  score: number;
+  scoreMax: number;
+};
