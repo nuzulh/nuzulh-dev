@@ -6,4 +6,3 @@ export * from './CarouselProjects';
 export * from './CardContact';
 export * from './TabsAbout';
 export * from './CardProject';
-export * from './ButtonSignIn';

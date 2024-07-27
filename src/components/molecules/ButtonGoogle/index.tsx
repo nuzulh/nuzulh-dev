@@ -1,22 +1,19 @@
 'use client';
 
 import { Atoms } from '@/components/atoms';
+import { ButtonProps } from '@/components/atoms/Button';
 import { useHydration } from '@/hooks';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
-type Props = {
-  onClick?: () => void;
-};
-
-export function ButtonGoogle({ onClick }: Props) {
+export function ButtonGoogle(props: ButtonProps) {
   const { theme } = useTheme();
   const { isHydrated } = useHydration();
 
   if (!isHydrated) return null;
 
   return (
-    <Atoms.Button size='lg' variant={theme === 'dark' ? 'default' : 'outline'} onClick={onClick}>
+    <Atoms.Button size='lg' variant={theme === 'dark' ? 'default' : 'outline'} {...props}>
       <Image
         src='/svgs/google.svg'
         height={22}

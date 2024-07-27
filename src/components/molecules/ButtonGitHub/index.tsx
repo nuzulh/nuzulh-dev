@@ -1,22 +1,19 @@
 'use client';
 
 import { Atoms } from '@/components/atoms';
+import { ButtonProps } from '@/components/atoms/Button';
 import { useHydration } from '@/hooks';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
-type Props = {
-  onClick?: () => void;
-};
-
-export function ButtonGitHub({ onClick }: Props) {
+export function ButtonGitHub(props: ButtonProps) {
   const { theme } = useTheme();
   const { isHydrated } = useHydration();
 
   if (!isHydrated) return null;
 
   return (
-    <Atoms.Button size='lg' variant='outline' onClick={onClick}>
+    <Atoms.Button size='lg' variant='outline' {...props}>
       <Image
         src={`/svgs/github${theme === 'dark' ? '-white' : ''}.svg`}
         height={22}
