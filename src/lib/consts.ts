@@ -116,6 +116,8 @@ export const MY_PROJECTS: Project[] = [
       getStack('TypeScript'),
       getStack('Shadcn UI'),
       getStack('TailwindCSS'),
+      getStack('Prisma'),
+      getStack('PostgreSQL'),
     ],
   },
   {
