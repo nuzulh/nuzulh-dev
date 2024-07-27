@@ -66,3 +66,16 @@ export type Project = {
   demoUrl?: string;
   content?: string;
 };
+
+export type Career = {
+  logoUrl?: string;
+  role: string;
+  companyLabel: string;
+  companyFullName: string;
+  address: string;
+  fromDate: Date;
+  endDate?: Date;
+  workMode: 'Full-time' | 'Part-time' | 'Freelance';
+  workType: 'Remote' | 'Hybrid' | 'On-site';
+  responsibilities: string[];
+};
