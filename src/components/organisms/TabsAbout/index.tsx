@@ -1,6 +1,6 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/molecules';
 import { BriefcaseBusiness, GraduationCap, Paperclip } from 'lucide-react';
-import { TabsContentAbout } from './contents';
+import { TabsContentsAbout } from './contents';
 
 export function TabsAbout() {
   return (
@@ -17,7 +17,7 @@ export function TabsAbout() {
         </TabsTrigger>
       </TabsList>
 
-      <TabsContentAbout />
+      <TabsContentsAbout />
     </Tabs>
   );
 }

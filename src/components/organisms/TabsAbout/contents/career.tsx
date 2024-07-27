@@ -22,7 +22,13 @@ export function TabsContentCareer() {
           {MY_CAREERS
             .sort((a, b) => b.fromDate.getTime() - a.fromDate.getTime())
             .map((item, index) => (
-              <Card key={index} data-aos='fade-left' data-aos-delay={100 * index} data-aos-once='true'>
+              <Card
+                key={index}
+                data-aos='fade-left'
+                data-aos-delay={100 * index}
+                data-aos-once='true'
+                data-aos-offset='-100'
+              >
                 <CardHeader className='flex-row items-start gap-4 space-y-0'>
                   <div className='size-10 lg:size-12 rounded bg-white flex items-center justify-center p-1'>
                     {item.logoUrl ? (
@@ -32,9 +38,7 @@ export function TabsContentCareer() {
                         height={46}
                         width={46}
                       />
-                    ) : (
-                      <Building className='text-black/80 opacity-70' />
-                    )}
+                    ) : <Building className='text-black/80 opacity-70' />}
                   </div>
                   <div className='space-y-1 w-full flex-1'>
                     <p className='font-semibold'>{item.role}</p>
