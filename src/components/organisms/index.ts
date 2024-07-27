@@ -5,3 +5,4 @@ export * from './FormContact';
 export * from './CarouselProjects';
 export * from './CardContact';
 export * from './TabsAbout';
+export * from './CardProject';
