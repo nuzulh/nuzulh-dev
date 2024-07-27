@@ -21,7 +21,13 @@ export default function ProjectsPage() {
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {MY_PROJECTS.map((item, index) => (
-          <div key={item.cname} data-aos='zoom-in' data-aos-delay={100 * index} data-aos-offset='-100'>
+          <div
+            key={item.cname}
+            data-aos='zoom-in'
+            data-aos-delay={100 * index}
+            data-aos-offset='-50'
+            data-aos-once='true'
+          >
             <CardProject data={item} headerClassName='aspect-video' />
           </div>
         ))}

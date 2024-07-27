@@ -8,3 +8,5 @@ export * from './Heading';
 export * from './ChipStack';
 export * from './Accordion';
 export * from './Tabs';
+export * from './ButtonGoogle';
+export * from './ButtonGitHub';
