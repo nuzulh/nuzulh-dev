@@ -1,3 +1,5 @@
+'use client';
+
 import { PropsWithCn } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { BadgeCheck } from 'lucide-react';
