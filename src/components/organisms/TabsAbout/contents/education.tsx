@@ -44,9 +44,9 @@ export function TabsContentEducation() {
                       <Atoms.Dot variant='muted' className='size-1 hidden lg:flex' />
                       <p className='font-medium'>{item.address}</p>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:items-center gap-2 text-muted-foreground text-xs'>
+                    <div className='flex flex-row items-center gap-2 text-muted-foreground text-xs'>
                       <p className='font-medium'>GPA</p>
-                      <Atoms.Dot variant='muted' className='size-1 hidden lg:flex' />
+                      <Atoms.Dot variant='muted' className='size-1' />
                       <p className='font-medium'>{item.score.toFixed(2)} / {item.scoreMax.toFixed(2)}</p>
                     </div>
                   </div>
