@@ -32,7 +32,7 @@ export default function HomePage() {
 
       <Atoms.Separator />
       <div className='flex items-center gap-4 justify-between'>
-        <h2 className='font-semibold text-lg opacity-85'>Projects I Have Worked On</h2>
+        <h2 className='font-semibold text-lg opacity-85'>Projects I&apos;ve Worked On</h2>
         <Atoms.Button variant='ghost' className='opacity-85' asChild>
           <Link href='/projects'>
             View All <ArrowRight className='size-4 ml-2' />
@@ -42,7 +42,7 @@ export default function HomePage() {
       <CarouselProjects />
 
       <Atoms.Separator />
-      <h2 className='font-semibold text-lg opacity-85'>Tools I Have Used</h2>
+      <h2 className='font-semibold text-lg opacity-85'>Tools I&apos;ve Used</h2>
       <CarouselSkills />
 
       <Atoms.Separator />

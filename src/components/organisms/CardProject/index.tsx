@@ -1,25 +1,27 @@
 import { Atoms } from '@/components/atoms';
 import { Card, CardContent, CardHeader } from '@/components/molecules';
-import { Project } from '@/lib/types';
+import { Project, PropsWithCn } from '@/lib/types';
+import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-type Props = {
+type Props = PropsWithCn<{
+  headerClassName?: string;
   data: Project;
-};
+}>;
 
-export function CardProject({ data }: Props) {
+export function CardProject({ data, className, headerClassName }: Props) {
   return (
     <Link href={`/projects/${data.cname}`}>
-      <Card className='w-full max-w-64 grid group'>
-        <CardHeader className='p-0 aspect-square relative overflow-hidden'>
+      <Card className={cn('w-full grid group', className)}>
+        <CardHeader className={cn('p-0 aspect-square relative overflow-hidden', headerClassName)}>
           <Image
             src={data.thumbnailUrl}
             alt={data.title}
-            height={280}
-            width={300}
-            className='rounded-t-lg aspect-square object-cover overflow-hidden'
+            height={500}
+            width={600}
+            className='rounded-t-lg object-cover overflow-hidden'
             loading='lazy'
           />
           <div className='absolute opacity-0 bg-black/65 group-hover:opacity-100 flex items-center justify-center inset-0 -top-[6px] rounded-t-lg border transition-all duration-300 group-hover:backdrop-blur-sm'>

@@ -23,7 +23,7 @@ export function CarouselProjects() {
               data-aos='fade-left'
               data-aos-delay={index * 100}
             >
-              <CardProject data={item} />
+              <CardProject data={item} className='max-w-64' />
             </CarouselItem>
           ))}
       </CarouselContent>
