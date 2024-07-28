@@ -21,7 +21,7 @@ export function Header({ showGradient = false }: Props) {
     <>
       {showGradient && (
         <div
-          className='hidden dark:block fixed inset-0 bg-gradient-to-br from-purple-500/10 to-background to-35% -z-10'
+          className='hidden dark:block absolute inset-0 bg-gradient-to-br from-purple-500/10 to-background to-35% -z-10'
         />
       )}
 
