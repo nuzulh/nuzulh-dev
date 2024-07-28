@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import { AOSProvider, ThemeProvider } from '@/providers';
 import { Aside, Header } from '@/components/organisms';
@@ -15,6 +15,11 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Nuzul H. - Personal Website',
   description: 'No description. Just my personal website.',
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1, // prevent zoom-in for input field in mobile device
 };
 
 export default function RootLayout({
