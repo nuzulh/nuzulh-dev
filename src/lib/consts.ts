@@ -90,7 +90,7 @@ export const MY_PROFILE: Profile = {
   socials: [
     { label: 'Linkedin', href: 'https://linkedin.com/in/nuzulh', icon: Linkedin },
     { label: 'GitHub', href: 'https://github.com/nuzulh', icon: Github },
-    { label: 'Instagram', href: 'https://instagram.com/nuzulhikam', icon: Instagram },
+    // { label: 'Instagram', href: 'https://instagram.com/nuzulhikam', icon: Instagram },
   ],
   skills: STACKS,
 };
@@ -100,9 +100,9 @@ export const MY_PROJECTS: Project[] = [
   {
     cname: 'nuzulh-dev',
     title: 'nuzulh.dev',
-    description: 'My personal website. Currently, I\'m still developing some cool features and will be launched soon. ☕️',
+    description: 'My personal website built from scratch using several powerful & modern technology stacks. Due this website is using starter plan (free) cloud hosting and databases; Vercel, Neon Serverless Postgres, and Firebase, with certain limitations, sometimes an error will occur. Feel welcome to utilize this website as a point of reference, a wellspring of inspiration, or as a template, all in accordance with the provided license. The source code is at your disposal to suit your specific requirements. Should you find value in this resource, your consideration of leaving a rating is greatly appreciated.',
     isFeatured: true,
-    // sourceCodeUrl: 'https://github.com/nuzulh/nuzulh-dev',
+    sourceCodeUrl: 'https://github.com/nuzulh/nuzulh-dev',
     demoUrl: 'https://nuzulh-dev.vercel.app/',
     thumbnailUrl: '/images/nuzulh-dev.webp',
     imageUrls: ['/images/nuzulh-dev.webp'],

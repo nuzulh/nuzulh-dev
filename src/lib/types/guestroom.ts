@@ -5,5 +5,4 @@ export type Message = {
   image: string;
   message: string;
   created_at: string;
-  is_show: boolean;
 };
