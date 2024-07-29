@@ -104,8 +104,15 @@ export const MY_PROJECTS: Project[] = [
     isFeatured: true,
     sourceCodeUrl: 'https://github.com/nuzulh/nuzulh-dev',
     demoUrl: 'https://nuzulh-dev.vercel.app/',
-    thumbnailUrl: '/images/nuzulh-dev.webp',
-    imageUrls: ['/images/nuzulh-dev.webp'],
+    thumbnailUrl: '/images/nuzulh-dev-1.webp',
+    imageUrls: [
+      '/images/nuzulh-dev-1.webp',
+      '/images/nuzulh-dev-2.webp',
+      '/images/nuzulh-dev-3.webp',
+      '/images/pagespeed-desktop.webp',
+      '/images/pagespeed-mobile.webp',
+      '/images/gtmetrix.webp',
+    ],
     stacks: [
       getStack('Next.js'),
       getStack('TypeScript'),
