@@ -105,12 +105,7 @@ export const MY_PROJECTS: Project[] = [
     // sourceCodeUrl: 'https://github.com/nuzulh/nuzulh-dev',
     demoUrl: 'https://nuzulh-dev.vercel.app/',
     thumbnailUrl: '/images/nuzulh-dev.webp',
-    imageUrls: [
-      '/images/nuzulh-dev.webp',
-      '/images/skpi.webp',
-      '/images/rumah-bahasa.webp',
-      '/images/listkol.webp',
-    ],
+    imageUrls: ['/images/nuzulh-dev.webp'],
     stacks: [
       getStack('Next.js'),
       getStack('TypeScript'),
@@ -118,6 +113,7 @@ export const MY_PROJECTS: Project[] = [
       getStack('TailwindCSS'),
       getStack('Prisma'),
       getStack('PostgreSQL'),
+      getStack('Firebase'),
     ],
   },
   {
