@@ -128,8 +128,12 @@ export const MY_PROJECTS: Project[] = [
     title: 'SKPI-FT-USK',
     description: 'An internal web application for managing student activities and approving certificates as requirements for college graduation. It has two roles; student and administrator. Student role is submitting activities and requesting certificates approval to administrator. Administrator role is approving student\'s requests. Additionally, students able to message administrator in realtime for supports. Furthermore, the app consists with "export to PDF" feature that summarize student activities.',
     isFeatured: true,
-    thumbnailUrl: '/images/skpi.webp',
-    imageUrls: ['/images/skpi.webp'],
+    thumbnailUrl: '/images/skpi-1.webp',
+    imageUrls: [
+      '/images/skpi-1.webp',
+      '/images/skpi-2.webp',
+      '/images/skpi-3.webp',
+    ],
     stacks: [
       getStack('React.js'),
       getStack('TypeScript'),
@@ -162,8 +166,13 @@ export const MY_PROJECTS: Project[] = [
     isFeatured: true,
     sourceCodeUrl: 'https://github.com/nuzulh/fe-listkol',
     demoUrl: 'https://listkol.vercel.app',
-    thumbnailUrl: '/images/listkol.webp',
-    imageUrls: ['/images/listkol.webp'],
+    thumbnailUrl: '/images/listkol-1.webp',
+    imageUrls: [
+      '/images/listkol-1.webp',
+      '/images/listkol-2.webp',
+      '/images/listkol-3.webp',
+      '/images/listkol-4.webp',
+    ],
     stacks: [
       getStack('React.js'),
       getStack('TypeScript'),
