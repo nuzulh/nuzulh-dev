@@ -25,7 +25,7 @@ export default function ProjectsPage() {
             key={item.cname}
             data-aos='zoom-in'
             data-aos-delay={100 * index}
-            data-aos-offset='-50'
+            data-aos-offset='-80'
             data-aos-once='true'
           >
             <CardProject data={item} headerClassName='aspect-video' />
