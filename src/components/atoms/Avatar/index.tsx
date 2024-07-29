@@ -54,9 +54,9 @@ const Avatar = React.forwardRef<
     fallback?: React.ReactNode;
     alt?: string;
   }
->(({ src, fallback, alt = 'avatar', ...props }, ref) => (
-  <AvatarRoot ref={ref} {...props}>
-    <AvatarImage src={src} alt={alt} />
+>(({ src, fallback, alt = 'avatar', className, ...props }, ref) => (
+  <AvatarRoot ref={ref} className={cn('bg-secondary', className)} {...props}>
+    <AvatarImage referrerPolicy='no-referrer' src={src} alt={alt} />
     <AvatarFallback>{fallback}</AvatarFallback>
   </AvatarRoot>
 ));

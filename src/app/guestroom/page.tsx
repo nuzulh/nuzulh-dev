@@ -3,7 +3,7 @@ import { Atoms } from '@/components/atoms';
 import { Card, CardHeader, Heading } from '@/components/molecules';
 import { Metadata } from 'next';
 import { SessionProvider } from 'next-auth/react';
-import { ButtonSignIn, InputMessage, Room } from './_components';
+import { ButtonSignIn, InputMessage, ListMessage } from './_components';
 
 export const metadata: Metadata = {
   title: 'Guestroom - Nuzul H.',
@@ -21,9 +21,9 @@ export default async function GuestroomPage() {
           description='Leave whatever you want to say. Feedbacks, suggestions, questions, or anything else!'
         />
         <Atoms.Separator />
-        <Card className='bg-card h-full'>
-          <CardHeader className='h-full justify-between'>
-            <Room />
+        <Card className='bg-card h-full p-0'>
+          <CardHeader className='h-full justify-between space-y-2 pt-0'>
+            <ListMessage />
             <ButtonSignIn />
             <InputMessage />
           </CardHeader>

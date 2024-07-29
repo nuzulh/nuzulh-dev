@@ -56,7 +56,7 @@ export function TabsContentCareer() {
                         {item.endDate ? format(item.endDate, 'MMM yyyy') : 'Present'}
                       </p>
                       <Atoms.Dot variant='muted' className='size-1 hidden lg:flex' />
-                      <p>{getDiffMonths(item.fromDate, item.endDate || new Date())}</p>
+                      <p>{getDiffMonths(item.endDate || new Date(), item.fromDate)}</p>
                       <Atoms.Dot variant='muted' className='size-1 hidden lg:flex' />
                       <p className='font-medium'>{item.workMode}</p>
                       <Atoms.Dot variant='muted' className='size-1 hidden lg:flex' />
