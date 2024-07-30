@@ -3,7 +3,7 @@ import { ChipStack, Heading } from '@/components/molecules';
 import { MY_PROJECTS } from '@/lib/consts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { CarouselPortfolio } from '@/components/organisms/CarouselPortfolio';
+import { CarouselPortfolio } from '@/components/organisms';
 import { Code2, Eye } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';

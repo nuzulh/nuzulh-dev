@@ -7,3 +7,4 @@ export * from './CardContact';
 export * from './TabsAbout';
 export * from './CardProject';
 export * from './DialogConfirm';
+export * from './CarouselPortfolio';
