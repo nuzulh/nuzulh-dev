@@ -1,13 +1,18 @@
 import { auth } from '@/auth';
 import { Atoms } from '@/components/atoms';
 import { Card, CardHeader, Heading } from '@/components/molecules';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { SessionProvider } from 'next-auth/react';
 import { ButtonSignIn, InputMessage, ListMessage } from './_components';
 
 export const metadata: Metadata = {
   title: 'Guestroom - Nuzul H.',
   description: 'Leave whatever you want to say. Feedbacks, suggestions, questions, or anything else!',
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1, // prevent zoom-in for input field in mobile device
 };
 
 export default async function GuestroomPage() {

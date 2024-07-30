@@ -1,11 +1,16 @@
 import { Atoms } from '@/components/atoms';
 import { Heading } from '@/components/molecules';
 import { FormContact } from '@/components/organisms';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact - Nuzul H.',
   description: 'Feel free to get in touch and let\'s have a discussion about how we can work together.',
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1, // prevent zoom-in for input field in mobile device
 };
 
 export default function ContactPage() {
