@@ -108,7 +108,6 @@ export const MY_PROJECTS: Project[] = [
     imageUrls: [
       '/images/nuzulh-dev-1.webp',
       '/images/nuzulh-dev-2.webp',
-      '/images/nuzulh-dev-3.webp',
       '/images/pagespeed-desktop.webp',
       '/images/pagespeed-mobile.webp',
       '/images/gtmetrix.webp',
