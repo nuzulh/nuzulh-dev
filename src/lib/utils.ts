@@ -20,7 +20,7 @@ export function cn(...inputs: ClassValue[]) {
 
 /**
  * slice an array to 3 sections
- * ex: 
+ * ex: [1,2,3,4,5,6] -> [[1,2], [3,4], [5,6]]
  * @param items T[]
  * @returns T[][]
  */
@@ -37,13 +37,13 @@ export function sliceToThreeArrays<T>(items: T[]) {
 
 /**
  * count months and years differences since now
- * @param a Date
- * @param b Date
+ * @param from Date
+ * @param to Date
  * @returns string
  */
-export function getDiffMonths(a: Date, b: Date) {
-  const diffYears = differenceInYears(a, b);
-  const diffMonths = differenceInMonths(a, subYears(b, diffYears));
+export function getDiffMonths(from: Date, to: Date) {
+  const diffYears = differenceInYears(to, from);
+  const diffMonths = differenceInMonths(subYears(to, diffYears), from);
 
   const yearsResult = diffYears < 1 ? '' :
     diffYears > 1
@@ -59,7 +59,7 @@ export function getDiffMonths(a: Date, b: Date) {
 
 /**
  * format date since today, else display dd/MM/yyyy, HH:mm
- * @param date 
+ * @param date
  * @returns string
  */
 export function formatTimeSince(date: Date) {
