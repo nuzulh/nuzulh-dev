@@ -1,15 +1,25 @@
 import { Atoms } from '@/components/atoms';
 import { Card, CardHeader, TabsContent } from '@/components/molecules';
-import { Download } from 'lucide-react';
+import { Download, FileBadgeIcon } from 'lucide-react';
 import Link from 'next/link';
 
-function DownloadButton() {
+const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL || '#';
+const certificatesUrl = process.env.NEXT_PUBLIC_CERTIFICATES_URL || '#';
+
+function ExternalButtons() {
   return (
-    <Atoms.Button variant='outline' asChild>
-      <Link href='/docs/resume.pdf' target='_blank'>
-        <Download className='size-4 mr-2' /> Download my resume
-      </Link>
-    </Atoms.Button>
+    <div className='grid gap-3 lg:grid-cols-2'>
+      <Atoms.Button data-aos='fade-right' variant='outline' asChild>
+        <Link href={`${resumeUrl}/view`} target='_blank'>
+          <Download className='size-4 mr-2' /> Download my resume
+        </Link>
+      </Atoms.Button>
+      <Atoms.Button data-aos='fade-left' variant='outline' asChild>
+        <Link href={certificatesUrl} target='_blank'>
+          <FileBadgeIcon className='size-4 mr-2' /> View my certificates
+        </Link>
+      </Atoms.Button>
+    </div>
   );
 }
 
@@ -17,13 +27,13 @@ export function TabsContentResume() {
   return (
     <TabsContent value='resume'>
       <Card className='bg-card'>
-        <CardHeader data-aos='fade-left' className='hidden lg:block space-y-4'>
-          <DownloadButton />
-          <iframe src='/docs/resume.pdf' className='w-full h-dvh' />
+        <CardHeader className='hidden lg:block space-y-4'>
+          <ExternalButtons />
+          <iframe loading='lazy' src={`${resumeUrl}/preview`} className='w-full h-dvh' />
         </CardHeader>
 
-        <CardHeader data-aos='fade-left' className='lg:hidden'>
-          <DownloadButton />
+        <CardHeader className='lg:hidden'>
+          <ExternalButtons />
         </CardHeader>
       </Card>
     </TabsContent>
