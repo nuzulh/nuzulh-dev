@@ -38,7 +38,7 @@ function MessageItem({ data, onDelete, isDeleting }: MessageItemProps) {
               {isMe ? 'You' : data.name}
             </span>
             {isAuthorMessage && <Atoms.Verified />}
-            <span className='text-xs text-muted-foreground'>
+            <span className='text-xs text-muted-foreground hidden lg:flex'>
               {formatTimeSince(new Date(data.created_at))}
             </span>
             {(isMe || isAuthor) && (
@@ -60,6 +60,9 @@ function MessageItem({ data, onDelete, isDeleting }: MessageItemProps) {
           >
             {data.message}
           </p>
+          <span className='text-xs text-muted-foreground lg:hidden'>
+            {formatTimeSince(new Date(data.created_at))}
+          </span>
         </div>
       </div>
 
