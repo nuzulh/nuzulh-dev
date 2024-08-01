@@ -1,15 +1,17 @@
 'use client';
 
 import { ButtonGitHub, ButtonGoogle } from '@/components/molecules';
-import { signInWithGoogle } from '@/services';
+import { signInFromServer } from '@/services';
 import { useSession } from 'next-auth/react';
 import { useTransition } from 'react';
 
 export function ButtonSignIn() {
   const { data: session } = useSession();
-  const [isPending, startSignIn] = useTransition();
+  const [googleLoading, startSignInWithGoogle] = useTransition();
+  const [githubLoading, startSignInWithGithub] = useTransition();
 
-  const onSignInWithGoogle = () => startSignIn(async () => await signInWithGoogle());
+  const onSignInWithGoogle = () => startSignInWithGoogle(async () => await signInFromServer('google'));
+  const onSignInWithGithub = () => startSignInWithGithub(async () => await signInFromServer('github'));
 
   if (session) return null;
 
@@ -19,8 +21,8 @@ export function ButtonSignIn() {
         Please sign-in to join the conversation. Don&apos;t worry, your data is safe.
       </p>
       <div className='flex flex-col lg:flex-row items-center justify-center gap-4'>
-        <ButtonGoogle onClick={onSignInWithGoogle} loading={isPending} />
-        <ButtonGitHub disabled />
+        <ButtonGoogle onClick={onSignInWithGoogle} loading={googleLoading} disabled={githubLoading} />
+        <ButtonGitHub onClick={onSignInWithGithub} loading={githubLoading} disabled={googleLoading} />
       </div>
     </div>
   );

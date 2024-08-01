@@ -2,10 +2,8 @@
 
 import { signIn } from '@/auth';
 
-export async function signInWithGoogle() {
-  await signIn('google');
-}
+type SignInMethod = 'google' | 'github';
 
-export async function signInWithGithub() {
-  await signIn('github');
+export async function signInFromServer(method: SignInMethod) {
+  await signIn(method);
 }
