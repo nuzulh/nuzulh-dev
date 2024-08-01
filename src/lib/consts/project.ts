@@ -113,4 +113,22 @@ export const MY_PROJECTS: Project[] = [
       getStack('Firebase'),
     ],
   },
+  {
+    cname: 'himatekkom',
+    title: 'HIMATEKKOM - USK',
+    description: 'A campus organization (computer engineering student association at Universitas Syiah Kuala) static website that covered introduction and event informations. This website also integrated to a fast-typing game functionality for a big yearly event called CMD (Computer Multi-Challenge Day).',
+    isFeatured: false,
+    sourceCodeUrl: 'https://github.com/nuzulh/himatekkom-frontend',
+    thumbnailUrl: '/images/himatekkom-1.webp',
+    imageUrls: [
+      '/images/himatekkom-1.webp',
+      '/images/himatekkom-2.webp',
+      '/images/himatekkom-3.webp',
+      '/images/himatekkom-4.webp',
+    ],
+    stacks: [
+      getStack('React.js'),
+      getStack('TailwindCSS'),
+    ],
+  },
 ];
