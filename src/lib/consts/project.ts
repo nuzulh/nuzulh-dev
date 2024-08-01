@@ -131,4 +131,22 @@ export const MY_PROJECTS: Project[] = [
       getStack('TailwindCSS'),
     ],
   },
+  {
+    cname: 'seulanga',
+    title: 'Seulanga Community',
+    description: 'Static landing page for a student community that applies Project Based Learning (PBL) to create individuals who are able to answer public challenges',
+    isFeatured: false,
+    sourceCodeUrl: 'https://github.com/nuzulh/seulanga-web',
+    demoUrl: 'https://seulanga-web.netlify.app',
+    thumbnailUrl: '/images/seulanga-1.webp',
+    imageUrls: [
+      '/images/seulanga-1.webp',
+      '/images/seulanga-2.webp',
+      '/images/seulanga-3.webp',
+    ],
+    stacks: [
+      getStack('React.js'),
+      getStack('TailwindCSS'),
+    ],
+  },
 ];
