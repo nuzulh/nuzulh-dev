@@ -1,4 +1,11 @@
-import { Coffee, Contact, Home, MessageCircleMore, User } from 'lucide-react';
+import {
+  Coffee,
+  Contact,
+  Home,
+  MessageCircleMore,
+  PieChartIcon,
+  User,
+} from 'lucide-react';
 import { NavMenu } from '../types';
 
 export const NAV_MENUS: NavMenu[] = [
@@ -10,9 +17,9 @@ export const NAV_MENUS: NavMenu[] = [
   },
   {
     sort: 2,
-    label: 'About',
-    icon: User,
-    href: '/about',
+    label: 'Dashboard',
+    icon: PieChartIcon,
+    href: '/dashboard',
   },
   {
     sort: 3,
@@ -28,6 +35,12 @@ export const NAV_MENUS: NavMenu[] = [
   },
   {
     sort: 5,
+    label: 'About',
+    icon: User,
+    href: '/about',
+  },
+  {
+    sort: 6,
     label: 'Guestroom',
     icon: MessageCircleMore,
     href: '/guestroom',

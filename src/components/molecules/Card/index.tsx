@@ -75,4 +75,11 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = 'CardFooter';
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+const CardMinimal = ({ label, value }: { label: string; value?: string; }) => (
+  <Card className='p-4 space-y-1.5'>
+    <h4 className='text-sm text-muted-foreground font-medium'>{label}</h4>
+    <p className='font-semibold'>{value || 'N/A'}</p>
+  </Card>
+);
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent, CardMinimal };
