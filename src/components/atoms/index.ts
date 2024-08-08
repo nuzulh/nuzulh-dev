@@ -8,6 +8,8 @@ import * as Verified from './Verified';
 import * as Label from './Label';
 import * as Input from './Input';
 import * as TextArea from './TextArea';
+import * as Skeleton from './Skeleton';
+import * as Progress from './Progress';
 
 export const Atoms = {
   ...Avatar,
@@ -20,4 +22,6 @@ export const Atoms = {
   ...Label,
   ...Input,
   ...TextArea,
+  ...Skeleton,
+  ...Progress,
 };

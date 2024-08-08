@@ -34,7 +34,7 @@ function MessageItem({ data, onDelete, isDeleting }: MessageItemProps) {
         <Atoms.Avatar src={data.image} className='size-8 lg:size-10' />
         <div className={cn('flex flex-col gap-1', isMe && 'items-end')}>
           <div className='flex items-center gap-1'>
-            <span className='text-sm font-semibold opacity-80 truncate'>
+            <span className='text-sm font-semibold opacity-85 truncate'>
               {isMe ? 'You' : data.name}
             </span>
             {isAuthorMessage && <Atoms.Verified />}
