@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PropsWithChildren } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import { AOSProvider, ThemeProvider } from '@/providers';
 import { Aside, Header } from '@/components/organisms';
@@ -17,11 +18,7 @@ export const metadata: Metadata = {
   description: 'No description. Just my personal website.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={jakarta.className}>
