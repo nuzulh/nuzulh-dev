@@ -8,3 +8,5 @@ export * from './TabsAbout';
 export * from './CardProject';
 export * from './DialogConfirm';
 export * from './CarouselPortfolio';
+export * from './ChartLanguages';
+export * from './ChartWorkCategories';

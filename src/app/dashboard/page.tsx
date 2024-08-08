@@ -1,7 +1,7 @@
 import { Atoms } from '@/components/atoms';
 import { Heading } from '@/components/molecules';
 import { Metadata } from 'next';
-import { Contributions, WeeklyStats } from './_components';
+import { WeeklyStats } from './_components';
 
 export const metadata: Metadata = {
   title: 'Dashboard - Nuzul H.',
@@ -17,8 +17,8 @@ export default function DashboardPage() {
       />
       <Atoms.Separator />
       <WeeklyStats />
-      <Atoms.Separator />
-      <Contributions />
+      {/* <Atoms.Separator />
+      <Contributions /> */}
     </main>
   );
 }

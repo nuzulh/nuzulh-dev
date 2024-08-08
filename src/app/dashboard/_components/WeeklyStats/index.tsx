@@ -5,7 +5,7 @@ import { SkeletonStats } from './SkeletonStats';
 
 export function WeeklyStats() {
   return (
-    <section className='space-y-4'>
+    <section className='flex flex-col gap-4'>
       <h3 className='flex items-center gap-2 text-lg font-semibold opacity-85'>
         <CalendarClock /> Weekly Statistics
       </h3>

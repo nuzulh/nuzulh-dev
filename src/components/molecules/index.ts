@@ -11,3 +11,4 @@ export * from './Tabs';
 export * from './ButtonGoogle';
 export * from './ButtonGitHub';
 export * from './Dialog';
+export * from './Chart';
