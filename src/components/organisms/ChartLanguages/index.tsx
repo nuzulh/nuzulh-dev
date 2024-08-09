@@ -17,19 +17,30 @@ type Props = {
 };
 
 const useLanguagesChart = (languages: Props['languages']) => {
+  const shortedLanguages = languages.filter(x => x.percent >= 1);
   const chartConfig = {} as ChartConfig;
   const chartData = [] as { name: string; value: number; fill: string; }[];
 
-  languages.forEach(lang => {
-    const key = languageColors[lang.name] ? lang.name : 'Other';
+  shortedLanguages.forEach(lang => {
+    const key = languageColors[lang.name] ? lang.name : 'Unknown Language';
 
     chartConfig[key] = { label: key, color: languageColors[key] };
-
     chartData.push({
       name: lang.name,
       value: lang.percent,
       fill: languageColors[key],
     });
+  });
+
+  const shortedTotalPercent = shortedLanguages.reduce((acc, curr) => curr.percent + acc, 0);
+  const otherLanguagesPercent = +(100 - shortedTotalPercent).toFixed(2);
+  const otherKey = 'Other';
+
+  chartConfig[otherKey] = { label: otherKey, color: languageColors[otherKey] };
+  chartData.push({
+    name: otherKey,
+    value: otherLanguagesPercent,
+    fill: languageColors[otherKey],
   });
 
   return { chartConfig, chartData };

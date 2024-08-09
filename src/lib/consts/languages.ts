@@ -1,15 +1,17 @@
 import { ResourceData } from '../types';
 
 export const languageColors: ResourceData<string> = {
-  'Other': '#1f9aef',
-  'Unknown Language': '#1f9aef',
+  'Other': '#fff3d7',
+  'Unknown Language': '#fff3d7',
   'ASP.NET': '#9400ff',
   'Assembly': '#6E4C13',
   'Astro': '#ff5a03',
+  'Bash': '#89e051',
   'C': '#555555',
   'C#': '#178600',
   'C++': '#f34b7d',
   'CMake': '#DA3434',
+  'CocoaPods': '#701516',
   'CSS': '#563d7c',
   'CSV': '#237346',
   'Dart': '#00B4AB',
@@ -67,6 +69,7 @@ export const languageColors: ResourceData<string> = {
   'Svelte': '#ff3e00',
   'Swift': '#F05138',
   'TOML': '#9c4221',
+  'TSConfig': '#3178c6',
   'TSX': '#3178c6',
   'TypeScript': '#3178c6',
   'Unity3D Asset': '#222c37',
