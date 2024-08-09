@@ -21,6 +21,7 @@ export async function sendMessage(payload: SchemaContact): Promise<ServiceRespon
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData,
+      cache: 'no-store',
     });
     const result = await response.json();
 

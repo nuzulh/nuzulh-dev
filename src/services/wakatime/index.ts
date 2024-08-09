@@ -1,6 +1,6 @@
 'use server';
 
-import { COMMON_MESSAGE } from '@/lib/consts';
+import { COMMON_MESSAGE, REVALIDATE_IN_SECONDS } from '@/lib/consts';
 import { ServiceResponse, Wakatime7Days, WakatimeAll } from '@/lib/types';
 
 const baseUrl = process.env.WAKATIME_API_URL || 'https://api.wakatime.com/api/v1';
@@ -11,6 +11,9 @@ export async function getWakatimeLast7Days(): Promise<ServiceResponse<Wakatime7D
     const response = await fetch(`${baseUrl}/users/current/stats/last_7_days`, {
       headers: {
         Authorization: `Basic ${apiKey}`,
+      },
+      next: {
+        revalidate: REVALIDATE_IN_SECONDS,
       },
     });
 
@@ -35,6 +38,9 @@ export async function getWakatimeAll(): Promise<ServiceResponse<WakatimeAll>> {
     const response = await fetch(`${baseUrl}/users/current/all_time_since_today`, {
       headers: {
         Authorization: `Basic ${apiKey}`,
+      },
+      next: {
+        revalidate: REVALIDATE_IN_SECONDS,
       },
     });
 
