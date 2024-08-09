@@ -57,6 +57,7 @@ export function ChartLanguages({ languages }: Props) {
           content={<ChartLegendContent className='flex-col items-start gap-2' />}
           layout='vertical'
           align='right'
+          verticalAlign='middle'
         />
         <Pie dataKey='value' radius={4} data={chartData} />
       </PieChart>
