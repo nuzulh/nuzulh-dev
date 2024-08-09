@@ -51,7 +51,7 @@ export function ChartLanguages({ languages }: Props) {
 
   return (
     <ChartContainer config={chartConfig} className='min-h-[200px] w-full'>
-      <PieChart accessibilityLayer>
+      <PieChart accessibilityLayer margin={{ top: 0, bottom: 0 }}>
         <ChartTooltip content={<ChartTooltipContent />} />
         <ChartLegend
           content={<ChartLegendContent className='flex-col items-start gap-2' />}

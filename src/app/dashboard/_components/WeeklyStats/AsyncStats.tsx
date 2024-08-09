@@ -1,5 +1,5 @@
 import { CardMinimal } from '@/components/molecules';
-import { ChartLanguages, ChartWorkCategories } from '@/components/organisms';
+import { ChartLanguages } from '@/components/organisms';
 import { getWakatimeAll, getWakatimeLast7Days } from '@/services';
 import { format, formatDistanceToNowStrict } from 'date-fns';
 
@@ -11,23 +11,30 @@ export async function AsyncStats() {
   const last7DaysStats = last7DaysResponse.data;
   const allStats = allResponse.data;
 
-  console.log(allStats);
-
   return (
     <>
-      <div className='grid md:grid-cols-2'>
-        <ChartWorkCategories />
+      <div className='flex gap-3 items-center flex-col md:flex-row'>
+        <div className='grid grid-cols-2 gap-3 w-full'>
+          <CardMinimal
+            label='Start Date'
+            value={last7DaysStats?.start ? format(last7DaysStats?.start, 'MMM dd, yyyy') : undefined}
+          />
+          <CardMinimal
+            label='End Date'
+            value={last7DaysStats?.end ? format(last7DaysStats?.end, 'MMM dd, yyyy') : undefined}
+          />
+          <CardMinimal
+            label='Top Editor'
+            value={last7DaysStats?.editors[0].name}
+          />
+          <CardMinimal
+            label='Top OS'
+            value={last7DaysStats?.operating_systems[0].name}
+          />
+        </div>
         <ChartLanguages languages={last7DaysStats?.languages || []} />
       </div>
       <div className='grid md:grid-cols-2 gap-3'>
-        <CardMinimal
-          label='Start Date'
-          value={last7DaysStats?.start ? format(last7DaysStats?.start, 'MMM dd, yyyy') : undefined}
-        />
-        <CardMinimal
-          label='End Date'
-          value={last7DaysStats?.end ? format(last7DaysStats?.end, 'MMM dd, yyyy') : undefined}
-        />
         <CardMinimal
           label='Daily Coding Average'
           value={last7DaysStats?.human_readable_daily_average_including_other_language}
@@ -48,7 +55,7 @@ export async function AsyncStats() {
           label={
             allStats?.range.start_date
               ? `All Time Since ${format(allStats?.range.start_date, 'MMM dd, yyyy')}`
-              : 'All Time Working Time'
+              : 'All Time Working'
           }
           value={allStats?.text}
         />
