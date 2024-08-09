@@ -36,7 +36,7 @@ const useLanguagesChart = (languages: Props['languages']) => {
   const otherLanguagesPercent = +(100 - shortedTotalPercent).toFixed(2);
   const otherKey = 'Other';
 
-  chartConfig[otherKey] = { label: otherKey, color: languageColors[otherKey] };
+  chartConfig[otherKey] = { label: `${otherKey} (Σ < 1%)`, color: languageColors[otherKey] };
   chartData.push({
     name: otherKey,
     value: otherLanguagesPercent,
