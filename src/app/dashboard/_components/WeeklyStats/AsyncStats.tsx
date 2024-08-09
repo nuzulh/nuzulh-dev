@@ -11,6 +11,8 @@ export async function AsyncStats() {
   const last7DaysStats = last7DaysResponse.data;
   const allStats = allResponse.data;
 
+  console.log(allStats);
+
   return (
     <>
       <div className='grid md:grid-cols-2'>
@@ -43,7 +45,11 @@ export async function AsyncStats() {
           }
         />
         <CardMinimal
-          label='All Time From Aug 01, 2024'
+          label={
+            allStats?.range.start_date
+              ? `All Time Since ${format(allStats?.range.start_date, 'MMM dd, yyyy')}`
+              : 'All Time Working Time'
+          }
           value={allStats?.text}
         />
       </div>
