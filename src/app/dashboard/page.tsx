@@ -17,8 +17,6 @@ export default function DashboardPage() {
       />
       <Atoms.Separator />
       <WeeklyStats />
-      {/* <Atoms.Separator />
-      <Contributions /> */}
     </main>
   );
 }
