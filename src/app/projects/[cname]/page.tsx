@@ -54,7 +54,7 @@ export default function ProjectDetailPage({ params }: Props) {
             </Atoms.Button>
             <Atoms.Button variant='secondary' size='sm' asChild>
               <Link
-                href={project.demoUrl || ''}
+                href={project.demoUrl || '#'}
                 target='_blank'
                 className={cn(!project.demoUrl && 'pointer-events-none opacity-50')}
               >
