@@ -43,7 +43,7 @@ export function sliceToThreeArrays<T>(items: T[]) {
  */
 export function getDiffMonths(from: Date, to: Date) {
   const diffYears = differenceInYears(to, from);
-  const diffMonths = differenceInMonths(subYears(to, diffYears), from);
+  const diffMonths = differenceInMonths(subYears(to, diffYears), from) + 1;
 
   const yearsResult = diffYears < 1 ? '' :
     diffYears > 1
