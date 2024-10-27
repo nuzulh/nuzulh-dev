@@ -18,12 +18,14 @@ export default function HomePage() {
             Based in {MY_PROFILE.address}
           </span>
         </div>
-        <div className='flex items-center gap-2'>
-          <Atoms.Dot variant='muted' />
-          <span className='text-muted-foreground text-sm'>
-            {MY_PROFILE.status2}
-          </span>
-        </div>
+        {MY_PROFILE.status2 && (
+          <div className='flex items-center gap-2'>
+            <Atoms.Dot variant='muted' />
+            <span className='text-muted-foreground text-sm'>
+              {MY_PROFILE.status2}
+            </span>
+          </div>
+        )}
       </div>
 
       <p className='leading-6 opacity-85'>

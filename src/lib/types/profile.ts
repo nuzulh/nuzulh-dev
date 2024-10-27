@@ -44,7 +44,7 @@ export type Profile = {
   avatar: string;
   address: string;
   status1: string;
-  status2: string;
+  status2?: string;
   description: string;
   socials: {
     label: string;

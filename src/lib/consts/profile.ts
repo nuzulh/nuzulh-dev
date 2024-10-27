@@ -8,8 +8,7 @@ export const MY_PROFILE: Profile = {
   avatar: 'https://github.com/nuzulh.png',
   address: 'Banda Aceh, Indonesia 🇮🇩',
   status1: 'Working remotely',
-  status2: 'Open for freelance project',
-  description: 'Experienced Software Engineer with over 3 years of hands-on expertise designing and implementing innovative web & mobile applications especially in frontend side. Strong problem-solving skills and a commitment to staying current with emerging trends in web & mobile development.',
+  description: 'Software Engineer with 3+ years of expertise in crafting cutting-edge web and mobile applications, specializing in frontend development. Skilled in creating intuitive user interfaces, optimizing performance, and leveraging the latest technologies. Known for meticulous attention to detail, creative problem-solving, and a passion for staying ahead of industry trends. Committed to delivering high-impact, user-centric solutions that not only meet but exceed client expectations, driving business growth and elevating user experiences. Adept at collaborating with cross-functional teams to transform complex requirements into seamless, efficient, and visually appealing applications.',
   socials: [
     { label: 'Linkedin', href: 'https://linkedin.com/in/nuzulh', icon: Linkedin },
     { label: 'GitHub', href: 'https://github.com/nuzulh', icon: Github },
